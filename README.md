@@ -12,3 +12,7 @@ Nick Ma
 Bryan Hoyt
 
 ![Bryan's photo](http://screenshu.com/static/uploads/temporary/6x/8b/1u/5unr08.jpg)
+
+Harrison Chang
+
+![Harrison's photo](https://scontent-sjc2-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/10710763_4667320017393_6448121638709415701_n.jpg?oh=c35b6b45d80816c624fb9faba76ac99d&oe=568D7BE7)
