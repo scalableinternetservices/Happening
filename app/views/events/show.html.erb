@@ -1,23 +1,10 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+<h2>
+  <strong><%= @event.name %></strong>
+</h2>
 
 <p>
   <strong>Location:</strong>
-  <%= @event.location %>
-</p>
-
-<p>
-  <strong>Timestart:</strong>
-  <%= @event.timestart %>
-</p>
-
-<p>
-  <strong>Timeend:</strong>
-  <%= @event.timeend %>
+  <%= @event.location %>, <%= @event.timestart %> to <%= @event.timeend %>
 </p>
 
 <p>

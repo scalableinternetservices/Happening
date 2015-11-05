@@ -20,12 +20,12 @@
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :timestart %><br>
-    <%= f.datetime_select :timestart %>
+    <%= f.label "From" %><br>
+    <%= f.datetime_select :timestart, ampm: true %>
   </div>
   <div class="field">
-    <%= f.label :timeend %><br>
-    <%= f.datetime_select :timeend %>
+    <%= f.label "To" %><br>
+    <%= f.datetime_select :timeend, ampm: true %>
   </div>
   <div class="field">
     <%= f.label :description %><br>

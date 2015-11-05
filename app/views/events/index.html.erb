@@ -1,16 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <h1>What's happening?</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name  </th>
-      <th>Location  </th>
-      <th>From  </th>
-      <th>To  </th>
-      <th>Description  </th>
-      <th>Host  </th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Description</th>
+      <th>Host</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,9 +22,9 @@
         <td><%= event.timeend %></td>
         <td><%= event.description %></td>
         <td><%= event.host %></td>
-        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'Details', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
