@@ -1,18 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
-  <strong>Time:</strong>
-  <%= @event.time %>
+  <strong>Name:</strong>
+  <%= @event.name %>
 </p>
 
 <p>
@@ -21,8 +11,23 @@
 </p>
 
 <p>
-  <strong>Owner:</strong>
-  <%= @event.owner %>
+  <strong>Timestart:</strong>
+  <%= @event.timestart %>
+</p>
+
+<p>
+  <strong>Timeend:</strong>
+  <%= @event.timeend %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Host:</strong>
+  <%= @event.host %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

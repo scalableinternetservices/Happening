@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  description: MyText
-  time: 2015-10-16 15:02:10
+  name: MyString
   location: MyString
-  owner: MyString
+  timestart: 2015-11-05 00:42:31
+  timeend: 2015-11-05 00:42:31
+  description: MyText
+  host: MyString
 
 two:
-  title: MyString
-  description: MyText
-  time: 2015-10-16 15:02:10
+  name: MyString
   location: MyString
-  owner: MyString
+  timestart: 2015-11-05 00:42:31
+  timeend: 2015-11-05 00:42:31
+  description: MyText
+  host: MyString

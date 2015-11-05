@@ -1,3 +1,5 @@
 class Event < ActiveRecord::Base
-  has_and_belongs_to_many :users
+  validates :name, :location, :description, :host, presence: true
+  validates :name, uniqueness: { case_sensitive: false }
+  belongs_to :user
 end
