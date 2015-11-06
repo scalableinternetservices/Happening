@@ -1,0 +1,6 @@
+<%= form_tag(search_path, :method => "get", class: "navbar-form", id: "search-form") do |f| %>
+  <div class="search_form">
+    <%= text_field_tag :keyword, params[:keyword], class: "search_form", placeholder: "Search Events" %>
+    <button type="submit" class="btn btn-primary-outline btn-sm">Search</button>
+  </div>
+<% end %>

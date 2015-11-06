@@ -8,6 +8,11 @@ class EventsController < ApplicationController
     respond_with(@events)
   end
 
+  def results
+    @events = Event.all
+    respond_with(@events)
+  end
+
   def show
     respond_with(@event)
   end
