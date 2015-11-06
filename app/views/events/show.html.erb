@@ -17,5 +17,8 @@
   <%= @event.host %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+<% if current_user == @event.user %> |
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Delete', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
