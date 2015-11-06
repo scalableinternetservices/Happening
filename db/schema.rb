@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106110200) do
+ActiveRecord::Schema.define(version: 20151106153756) do
 
   create_table "attendances", force: true do |t|
     t.integer  "guest_id"
@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 20151106110200) do
     t.datetime "timeend"
     t.text     "description"
     t.string   "host"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.integer  "user_id"
   end
 

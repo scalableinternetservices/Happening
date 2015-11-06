@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  before_action :correct_user, only: [:edit, :destroy]
   respond_to :html
 
   def index
@@ -22,6 +22,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.user_id = current_user.id
     @event.save
     respond_with(@event)
   end
@@ -37,6 +38,14 @@ class EventsController < ApplicationController
   end
 
   private
+    def correct_user
+      @event = current_user.events.find_by(id: params[:id])
+      if @event.nil?
+        flash[:alert] = "You are not logged in as the correct user."
+        redirect_to root_url
+      end
+    end
+
     def set_event
       @event = Event.find(params[:id])
     end

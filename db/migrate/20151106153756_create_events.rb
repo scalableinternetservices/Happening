@@ -7,8 +7,8 @@ class CreateEvents < ActiveRecord::Migration
       t.datetime :timeend
       t.text :description
       t.string :host
-
-      t.timestamps null: false
+      t.references :user, index: true
     end
+    add_foreign_key :events, :users
   end
 end
