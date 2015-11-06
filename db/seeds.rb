@@ -5,3 +5,61 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+events = Event.create([
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  },
+  { name: 'Cool Event',
+    location: 'Cool Place',
+    timestart: DateTime.new(2015, 11, 24, 13),
+    timeend: DateTime.new(2015, 11, 24, 14),
+    description: 'Coolest event ever.',
+    host: 'Cool guy'
+  }])

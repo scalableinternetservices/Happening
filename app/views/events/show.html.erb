@@ -3,18 +3,23 @@
 </h2>
 
 <p>
-  <strong>Location:</strong>
-  <%= @event.location %>, <%= @event.timestart %> to <%= @event.timeend %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p>
   <strong>Host:</strong>
   <%= @event.host %>
+</p>
+
+<p>
+  <strong>Where:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>When:</strong>
+  <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%l:%M %p") %>
+</p>
+
+<p>
+  ----------<br>
+  <%= @event.description %>
 </p>
 
 <%= render 'attend_form' %>
