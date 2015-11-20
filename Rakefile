@@ -4,3 +4,8 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+task delete_expired_event: :environment do
+  Event.where("timeend <= ?", Time.now).each do |event|
+    event.destroy
+  end
+end
