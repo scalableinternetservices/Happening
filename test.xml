@@ -4,7 +4,7 @@
   </clients>
   <servers>
     <!-- update this with the correct AWS server -->
-    <server host="www.google.com" port="80" type="tcp"/>
+    <server host="ec2-52-33-123-44.us-west-2.compute.amazonaws.com" port="80" type="tcp"/>
   </servers>
    <load>
     <arrivalphase phase="1" duration="30" unit="second">
@@ -41,16 +41,53 @@
         <var name="random_user_number" />
       </setdynvars>
       <!-- register -->
-            <request subst="true">
+      <request subst="true">
         <http
           url='/users/sign_up'
           version='1.1'
           method='POST'
           contents='user%5Bemail%5D=user_%%_random_user_number%%&amp;
           user%5Bpassword%5D=password_%%_random_user_number%%&amp;
-          user%5Bpassword_confirmation%5D=password%%_random_user_number%%&amp;
-          commit=Create+Community'>
+          user%5Bpassword_confirmation%5D=password_%%_random_user_number%%&amp;
+          commit=Sign+up'>
         </http>
+      </request>
+      <!-- get to the homescreen, wait, and create event -->
+      <thinktime value="2" random="true"></thinktime>
+      <request>
+        <http url="/events/new" version="1.1" method="GET"/>
+      </request>
+      <thinktime value="2" random="true"></thinktime>
+      <request subst="true">
+        <http
+          url='/events/new'
+          version='1.1'
+          method='POST'
+          contents='event%5Bname%5D=event_%%_random_user_number%%&amp;
+          event%5Blocation%5D=place_%%_random_user_number%%&amp;
+          event%5Bdescription%5D=description_%%_random_user_number%%&amp;
+          event%5Bhost%5D=user_%%_random_user_number%%&amp;
+          commit=Submit'>
+        </http>
+      </request>
+      <!-- think and attend -->
+      <!-- maybe missing token?-->
+      <thinktime value="2" random="true"></thinktime>
+      <request subst="true">
+        <http
+          url='/events/new'
+          version='1.1'
+          method='POST'
+          contents='commit=Attend'>
+        </http>
+      </request>
+      <!-- go home and log out -->
+      <request>
+        <http url="/" version="1.1" method="GET"/>
+      </request>
+      <thinktime value="2" random="true"></thinktime>
+      <request>
+        <http url="/users/sign_out" version="1.1" method="GET"/>
       </request>
     </session>
   </sessions>
