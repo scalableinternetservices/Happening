@@ -1,0 +1,74 @@
+<div class="attending">
+  <h1>
+    Events you're attending:
+  </h1>
+
+  <% if current_user.occasions.count == 0 %>
+  <h4>
+    You're not attending any events.
+  </h4>
+  <p>
+    <a href="<%= events_path %>">
+      Find one now!
+    </a>
+  </p>
+  <% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Host</th>
+        <th colspan="5"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% current_user.occasions.each do |event| %>
+        <tr>
+          <td><%= link_to event.name, event %></td>
+          <td><%= event.location %></td>
+          <td><%= event.host %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+</div>
+<div class="hosting">
+  <h1>
+    Events you're hosting:
+  </h1>
+
+  <% if current_user.events.count == 0 %>
+  <h4>
+    You're not hosting any events.
+  </h4>
+  <p>
+    <a href="<%= new_event_path %>">
+      Make one now!
+    </a>
+  </p>
+  <% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Host</th>
+        <th colspan="5"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% current_user.events.each do |event| %>
+        <tr>
+          <td><%= link_to event.name, event %></td>
+          <td><%= event.location %></td>
+          <td><%= event.host %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+</div>
