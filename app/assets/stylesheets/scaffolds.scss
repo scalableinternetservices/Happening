@@ -12,13 +12,14 @@ p, ol, ul, td {
   line-height: 18px;
 }
 
+/*
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
 }
 
-a {
+/*a {
   color: #000;
 
   &:visited {
@@ -29,7 +30,7 @@ a {
     color: #fff;
     background-color: #000;
   }
-}
+}*/
 
 div {
   &.field, &.actions {

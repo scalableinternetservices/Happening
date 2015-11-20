@@ -7,7 +7,7 @@
   <h4>
     You're not attending any events.
   </h4>
-  <%= link_to 'Find one now!', events_path, class: "btn btn-primary-outline btn-sm" %>
+  <%= link_to 'Find one now!', events_path, class: "btn btn-primary btn-sm" %>
   <% else %>
   <table>
     <thead>
@@ -29,7 +29,8 @@
       <% end %>
     </tbody>
   </table>
-  <%= link_to 'Find events', events_path, class: "btn btn-primary-outline btn-sm" %>
+  <br>
+  <%= link_to 'Find events', events_path, class: "btn btn-primary btn-sm" %>
   <% end %>
 </div>
 <div class="hosting">
@@ -41,7 +42,7 @@
   <h4>
     You're not hosting any events.
   </h4>
-  <%= link_to 'Make one now!', new_event_path, class: "btn btn-primary-outline btn-sm" %>
+  <%= link_to 'Make one now!', new_event_path, class: "btn btn-primary btn-sm" %>
   <% else %>
   <table>
     <thead>
@@ -63,6 +64,7 @@
       <% end %>
     </tbody>
   </table>
-  <%= link_to 'New event', new_event_path, class: "btn btn-primary-outline btn-sm" %>
+  <br>
+  <%= link_to 'New event', new_event_path, class: "btn btn-primary btn-sm" %>
   <% end %>
 </div>
