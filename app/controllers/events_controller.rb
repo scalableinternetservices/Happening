@@ -42,6 +42,11 @@ class EventsController < ApplicationController
     respond_with(@event)
   end
 
+  def guests
+    @event = Event.all
+    respond_with(@event)
+  end
+
   private
     def correct_user
       @event = current_user.events.find_by(id: params[:id])

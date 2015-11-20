@@ -6,7 +6,13 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      get :guests, :occasions
+      get :occasions
+    end
+  end
+
+  resources :events do
+    member do
+      get :guests
     end
   end
 
