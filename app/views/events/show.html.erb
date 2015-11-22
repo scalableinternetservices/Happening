@@ -14,7 +14,7 @@
 
 <p>
   <strong>When:</strong>
-  <%= if @event.timestart.strftime("%A, %B %-d, %Y") == @event.timeend.strftime("%A, %B %-d, %Y") %>
+  <% if @event.timestart.strftime("%A, %B %-d, %Y") == @event.timeend.strftime("%A, %B %-d, %Y") %>
     <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%l:%M %p") %>
   <% else %>
     <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%A, %B %-d, %Y, %l:%M %p") %>
