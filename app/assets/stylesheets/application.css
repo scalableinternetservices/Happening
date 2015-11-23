@@ -28,3 +28,8 @@ table, td, th {
   padding-right: 10px;
   border-bottom: 1px solid #DDD;
 }
+
+#user-email {
+  font-weight: bold;
+  text-align: center;
+}
