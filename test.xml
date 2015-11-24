@@ -34,7 +34,9 @@
       <request>
         <http url="/" version="1.1" method="GET"/>
       </request>
+
       <thinktime value="2" random="true"></thinktime>
+
       <request>
         <http url="/users/sign_up" version="1.1" method="GET"/>
       </request>
@@ -75,9 +77,10 @@
       <!-- think and attend -->
       <!-- maybe missing token?-->
       <thinktime value="2" random="true"></thinktime>
+
       <request subst="true">
         <http
-          url='/events/new'
+          url='/events/'
           version='1.1'
           method='POST'
           contents='commit=Attend'>
@@ -88,9 +91,7 @@
         <http url="/" version="1.1" method="GET"/>
       </request>
       <thinktime value="2" random="true"></thinktime>
-      <request>
-        <http url="/users/sign_out" version="1.1" method="GET"/>
-      </request>
+
     </session>
   </sessions>
 </tsung>
