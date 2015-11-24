@@ -1,38 +1,35 @@
-<h2>
-  <strong><%= @event.name %></strong>
-</h2>
+<div class="page-header">
+  <h1><%= @event.name %> <small>Hosted by <%= @event.host %></small></h1>
+</div>
 
-<p>
-  <strong>Host:</strong>
-  <%= @event.host %>
-</p>
+<div class="well">
+  <p>
+    <span class="glyphicon glyphicon-map-marker"></span>
+    <%= @event.location %>
+  </p>
 
-<p>
-  <strong>Where:</strong>
-  <%= @event.location %>
-</p>
+  <p>
+    <span class="glyphicon glyphicon-time"></span>
+    <% if @event.timestart.strftime("%A, %B %-d, %Y") == @event.timeend.strftime("%A, %B %-d, %Y") %>
+      <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%l:%M %p") %>
+    <% else %>
+      <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%A, %B %-d, %Y, %l:%M %p") %>
+    <% end %>
+  </p>
 
-<p>
-  <strong>When:</strong>
-  <%= if @event.timestart.strftime("%A, %B %-d, %Y") == @event.timeend.strftime("%A, %B %-d, %Y") %>
-    <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%l:%M %p") %>
-  <% else %>
-    <%= @event.timestart.strftime("%A, %B %-d, %Y, %l:%M %p") %> to <%= @event.timeend.strftime("%A, %B %-d, %Y, %l:%M %p") %>
-  <% end %>
-</p>
-
-<p>
-  <strong>Attending:</strong>
-  <%= render 'stats' %>
-</p>
-
-<p>
-  ----------<br>
-  <%= @event.description %>
-</p>
-
+  <p>
+    <span class="glyphicon glyphicon-ok"></span>
+    <%= render 'stats' %>
+  </p>
+</div>
 <%= render 'attend_form' %>
 <br>
+<div class="well">
+  <p>
+    <%= @event.description %>
+  </p>
+</div>
+
 <%= link_to 'Back', events_path %>
 <% if current_user.id == @event.user_id %> |
 <%= link_to 'Edit', edit_event_path(@event) %> |

@@ -1,20 +1,20 @@
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="/">Attending</a></li>
-  <li role="presentation"><a href="/users/:id/events">Hosting</a></li>
+  <li role="presentation"><a href="/">Attending</a></li>
+  <li role="presentation" class="active"><a href="/users/:id/events">Hosting</a></li>
 </ul>
-<div class="attending">
+<div class="hosting">
   <h1>
-    Events you're attending:
+    Events you're hosting:
   </h1>
 
-  <% if current_user.occasions.count == 0 %>
+  <% if current_user.events.count == 0 %>
   <h4>
-    You're not attending any events.
+    You're not hosting any events.
   </h4>
-  <%= link_to 'Find one now!', events_path, class: "btn btn-primary btn-sm" %>
+  <%= link_to 'Make one now!', new_event_path, class: "btn btn-primary btn-sm" %>
   <% else %>
   <div class="row">
-      <% current_user.occasions.each do |event| %>
+      <% current_user.events.each do |event| %>
         <div class="col-sm-4 col-md-4 col-lg-4">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -35,6 +35,6 @@
         </div>
       <% end %>
   </div>
-  <%= link_to 'Find events', events_path, class: "btn btn-primary btn-sm" %>
+  <%= link_to 'New event', new_event_path, class: "btn btn-primary btn-sm" %>
   <% end %>
 </div>

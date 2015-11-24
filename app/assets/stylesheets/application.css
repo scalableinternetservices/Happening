@@ -16,6 +16,7 @@
 
 body {
   padding-top: 100px;
+  padding-bottom: 10px;
 }
 
 footer {
@@ -27,4 +28,9 @@ table, td, th {
   border: none;
   padding-right: 10px;
   border-bottom: 1px solid #DDD;
+}
+
+#user-email {
+  font-weight: bold;
+  text-align: center;
 }
