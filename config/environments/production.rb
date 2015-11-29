@@ -2,7 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
-  #config.cache_classes = true
+  config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -12,8 +12,8 @@ Rails.application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = false
-  #config.cache_store = :mem_cache_store, "cache-1.example.com"
+  config.action_controller.perform_caching = true
+  config.cache_store = :mem_cache_store, "cache-1.example.com"
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -25,7 +25,7 @@ Rails.application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
-  #config.assets.css_compressor = :yui
+  config.assets.css_compressor = :yui
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
@@ -69,7 +69,7 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  #config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
+  config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
 
 
   # Send deprecation notices to registered listeners.
