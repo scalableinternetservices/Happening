@@ -80,7 +80,7 @@
 
       <request subst="true">
         <http
-          url='/events/'
+          url='/events'
           version='1.1'
           method='POST'
           contents='commit=Attend'>
