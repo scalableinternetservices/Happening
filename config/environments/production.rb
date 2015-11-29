@@ -69,7 +69,7 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
+  #config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
 
 
   # Send deprecation notices to registered listeners.
