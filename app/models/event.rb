@@ -10,7 +10,7 @@ class Event < ActiveRecord::Base
   has_many :guests, through: :passive_attendances, source: :guest
 
   def end_gt_start
-    if timestart >= timeend
+    if timestart > timeend
       errors.add(:timeend, "can't be before the event starts")
     end
   end
