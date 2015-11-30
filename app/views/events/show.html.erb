@@ -19,7 +19,12 @@
 
   <p>
     <span class="glyphicon glyphicon-ok"></span>
-    <%= render 'stats' %>
+    <%= @event.guests.count %>
+    <% if @event.guests.count == 1 %>
+      guest
+    <% else %>
+      guests
+    <% end %>
   </p>
 </div>
 <%= render 'attend_form' %>

@@ -1,8 +1,8 @@
 class Event < ActiveRecord::Base
   belongs_to :user
+  validate :end_gt_start
   validates :user_id, presence: true
   validates :name, :location, :description, :host, presence: true
-  validate :end_gt_start
   validates :name, uniqueness: { case_sensitive: false }
   has_many :passive_attendances, class_name: "Attendance",
                                  foreign_key: "occasion_id",

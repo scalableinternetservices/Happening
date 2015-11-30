@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dalli'
 gem 'jquery-turbolinks'
 # For authentication
 gem 'devise'
