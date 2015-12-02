@@ -4,6 +4,7 @@
 
 <div class="row">
     <% @events.each do |event| %>
+    <% cache ['event_list', event] do %>
       <% if search_term.in? event.name %>
         <div class="col-sm-4 col-md-4 col-lg-4">
           <div class="panel panel-default">
@@ -23,6 +24,7 @@
             </div>
           </div>
         </div>
+      <% end %>
       <% end %>
     <% end %>
 </div>
