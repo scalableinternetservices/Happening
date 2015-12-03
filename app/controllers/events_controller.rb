@@ -2,6 +2,10 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :destroy]
   respond_to :html
+  #cache_sweeper :event_sweeper
+
+  #caches_action :show
+  #caches_action :index
 
   def index
     @events = Event.all

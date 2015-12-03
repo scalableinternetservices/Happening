@@ -13,6 +13,10 @@ Rails.application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = true
   config.cache_store = :mem_cache_store, "cache-1.example.com"
+  config.assets.css_compressor = :yui
+  config.assets.js_compressor = :uglifier
+  config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
+
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
@@ -35,7 +39,6 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
-config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
