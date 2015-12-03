@@ -15,7 +15,7 @@
   <% else %>
   <div class="row">
       <% current_user.occasions.each do |event| %>
-      <!--<% cache ['occasion_list', event] do %>-->
+      <  <% cache @occasion do %>
         <div class="col-sm-4 col-md-4 col-lg-4">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-      <!--  <% end %>-->
+       <% end %>
       <% end %>
   </div>
   <%= link_to 'Find events', events_path, class: "btn btn-primary btn-sm" %>

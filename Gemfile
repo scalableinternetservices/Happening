@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'dalli'
+gem 'yui-compressor'
 gem 'jquery-turbolinks'
 # For authentication
 gem 'devise'

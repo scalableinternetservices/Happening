@@ -14,4 +14,5 @@ class Event < ActiveRecord::Base
       errors.add(:timeend, "can't be before the event starts")
     end
   end
+  
 end

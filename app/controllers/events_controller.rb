@@ -14,7 +14,9 @@ class EventsController < ApplicationController
   end
 
   def show
+    stale? @event do
     respond_with(@event)
+  end
   end
 
   def new

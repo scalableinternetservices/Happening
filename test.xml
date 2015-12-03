@@ -6,13 +6,13 @@
   </clients>
   <servers>
     <!-- update this with the correct AWS server -->
-    <server host="ec2-52-33-123-44.us-west-2.compute.amazonaws.com" port="80" type="tcp"></server>
+    <server host="ec2-52-35-74-217.us-west-2.compute.amazonaws.com" port="80" type="tcp"></server>
   </servers>
    <load>
-    <arrivalphase phase="1" duration="10" unit="second">
+    <arrivalphase phase="1" duration="30" unit="second">
       <users arrivalrate="1" unit="second"></users>
     </arrivalphase>
-        <!--
+
     <arrivalphase phase="2" duration="30" unit="second">
       <users arrivalrate="2" unit="second"></users>
     </arrivalphase>
@@ -22,7 +22,7 @@
     </arrivalphase>
    <arrivalphase phase="4" duration="30" unit="second">
      <users arrivalrate="8" unit="second"></users>
-   </arrivalphase> -->
+   </arrivalphase>
   </load>
   <options>
     <option name="global_ack_timeout" value="2000"></option>
@@ -51,7 +51,7 @@
           url='/users/sign_up'
           version='1.1'
           method='POST'
-          contents='user%5Bemail%5D=user_%%_random_user_number%%%40g.com%%&amp;
+          contents='user%5Bemail%5D=user_%%_random_user_number%%%40g.com&amp;
           user%5Bpassword%5D=password_%%_random_user_number%%&amp;
           user%5Bpassword_confirmation%5D=password_%%_random_user_number%%&amp;
           commit=Sign+up'>
