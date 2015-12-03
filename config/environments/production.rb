@@ -12,14 +12,14 @@ Rails.application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
   #config.cache_store = :mem_cache_store, "cache-1.example.com"
   config.cache_store = :mem_cache_store, "cache-1.example.com"
   config.assets.css_compressor = :yui
   config.assets.js_compressor = :uglifier
   config.static_cache_control = "public, s-maxage=15552000, max-age=2592000"
 
-   Enable Rack::Cache
+   #Enable Rack::Cache
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
   # NGINX, varnish or squid.

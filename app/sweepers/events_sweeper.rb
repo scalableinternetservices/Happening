@@ -1,4 +1,4 @@
-class EventSweeper < ActionController::Caching::Sweeper
+=beginclass EventSweeper < ActionController::Caching::Sweeper
   observe Event
 
   def after_create(event)
@@ -28,3 +28,4 @@ class EventSweeper < ActionController::Caching::Sweeper
       :action => 'recent', :action_suffix => 'all_events')
   end
 end
+=end
