@@ -6,7 +6,7 @@
   </clients>
   <servers>
     <!-- update this with the correct AWS server -->
-    <server host="ec2-52-35-74-217.us-west-2.compute.amazonaws.com" port="80" type="tcp"></server>
+    <server host="ec2-52-34-211-244.us-west-2.compute.amazonaws.com" port="80" type="tcp"></server>
   </servers>
    <load>
     <arrivalphase phase="1" duration="30" unit="second">

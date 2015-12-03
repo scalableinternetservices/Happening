@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   before_action :correct_user, only: [:edit, :destroy]
   respond_to :html
 
+
   def index
     @events = Event.all
     respond_with(@events)
@@ -13,14 +14,18 @@ class EventsController < ApplicationController
     respond_with(@events)
   end
 
+
+
   def show
     stale? @event do
     respond_with(@event)
-  end
+ end
   end
 
   def new
+
     @event = Event.new
+
     respond_with(@event)
   end
 

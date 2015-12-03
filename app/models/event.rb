@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :user, :touch => true
   validate :end_gt_start
   validates :user_id, presence: true
   validates :name, :location, :description, :host, presence: true
@@ -14,5 +14,5 @@ class Event < ActiveRecord::Base
       errors.add(:timeend, "can't be before the event starts")
     end
   end
-  
+
 end

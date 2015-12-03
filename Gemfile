@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'dalli'
+gem 'dalli-store-extensions', :git => "git://github.com/defconomicron/dalli-store-extensions.git"
+gem 'actionpack-action_caching'
 gem 'yui-compressor'
 gem 'jquery-turbolinks'
 # For authentication

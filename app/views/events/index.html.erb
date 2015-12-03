@@ -3,7 +3,7 @@
 <div class="row">
 
     <% @events.each do |event| %>
-      <% cache @event do %>
+    <% cache do %>
       <div class="col-sm-4 col-md-4 col-lg-4">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -22,8 +22,8 @@
           </div>
         </div>
       </div>
+  
    <% end %>
-
     <% end %>
 </div>
 <%= link_to 'New Event', new_event_path, class: "btn btn-primary btn-sm" %>
