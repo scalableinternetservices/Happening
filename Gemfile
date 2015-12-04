@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 gem 'dalli'
 gem 'jquery-turbolinks'
-gem 'dalli-store-extensions', :git => "git://github.com/defconomicron/dalli-store-extensions.git"
-gem 'actionpack-action_caching'
-gem 'yui-compressor'
+#gem 'dalli-store-extensions', :git => "git://github.com/defconomicron/dalli-store-extensions.git"
+#gem 'actionpack-action_caching'
+#gem 'yui-compressor'
 
-gem 'rails-observers'
-gem 'rack-cache'
+#gem 'rails-observers'
+#gem 'rack-cache'
 # For authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
